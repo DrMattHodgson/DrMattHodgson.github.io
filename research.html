@@ -90,9 +90,9 @@
                                                         <div class="col-md-10 heading-section text-left ftco-animate">
 								<h3 class="mb-3 mt-2 font-weight-bold">Introduction</h3>
 								<p>
-								Modeling real materials using quantum mechanics requires solving the many-body Schr&#246;dinger equation, which describes the behavior of all the electrons in a system. However, solving this equation for even moderately large systems is extremely computationally expensive, and often impossible. Therefore, approximations must be used in order to make the calculations tractable. These approximations often involve simplifying the problem in some way, such as by assuming that the electrons in the system are non-interacting, or by making assumptions about the form of the electronic wavefunction. Despite these simplifications, the approximations used in density functional theory (DFT) are still able to accurately predict the properties of real materials in many cases, but they will not be always able to capture all the details of the system. Specifically, DFT is notoriously unreliable for modelling excitation processes.
+								Modeling real materials using quantum mechanics requires the many-body Schr&#246;dinger equation to be solved. However, solving this equation for even moderately large systems is extremely computationally expensive. Therefore, approximations must be used in order to make the calculations possible. These approximations often involve simplifying the problem in some way, for instance, by imposing limitations on the form of the electron wavefunction. The approximations used in density functional theory (DFT) are able to accurately predict the properties of real materials in many cases, but they are notoriously unreliable for modelling excitation processes, which are central to the next generation of technologies.
 								</p>
-								<iframe src="https://www.youtube.com/embed/yr7kHDTJuLs" width="100%" height="500" style="border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<!--iframe src="https://www.youtube.com/embed/yr7kHDTJuLs" width="100%" height="500" style="border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
 							</div>
 						</div>
 					</div>
@@ -103,10 +103,13 @@
 							<div class="col-md-10 heading-section text-left ftco-animate">
 								<h3 id="Excitations" class="mb-3 mt-2 font-weight-bold">Electron excitation</h3>
 								<p>
-								Kohn and Sham's approach to DFT is the most widely used method for calculating ground-state electronic properties thanks to its reliable and computationally inexpensive approximations. However, these commonly used approximations are unreliable for modelling excited states.   
+								Kohn and Sham's approach to DFT is the most widely used method for calculating ground-state electronic properties thanks to its computationally inexpensive approximations that are reliable when the electrons are in their lowest energy state. However, these commonly used approximations are unreliable for modelling excited states.   
 								</p>
 								<p>
-								Using our iDEA code, we model prototype systems that mimic the fundamental physics of excitation processes in real materials. By applying iDEA's powerful inversion algorithms, we can study the exact Kohn-Sham potential of the system when electrons are excited. By comparing the exact potential to approximate potentials, which are unreliable for excitation processes, we can gain the insights needed to develop improved, practical approximations needed for reliably modelling excitation processes in real materials.
+								The Kohn-Sham approach is a powerful methodology that utilises a system of fully non-interacting electrons, which are influenced by an effective external potential. This <q>Kohn-Sham</q> potential guarantees that the single-particle electron density matches that of the interacting many-body system. By employing this auxiliary system within the framework of DFT, it becomes possible to extract many-body observables from the single-particle system at a significantly reduced computational cost. However, the accuracy of this approach strongly depends the Kohn-Sham effective potential. Unfortunately, approximations often have to be employed to determine this potential, making it less reliable in certain physical situations.
+								</p>
+								<p>
+								Using our iDEA code, we model prototype systems that mimic the fundamental physics of excitation processes in real materials. By applying iDEA's powerful inversion algorithms, we can study the exact Kohn-Sham potential of the system when electrons are excited. By comparing the exact potential to approximate potentials we can gain the insights needed to develop improved, practical approximations for reliably modelling excitation processes in real materials.
 								</p>
 
 							</div>
@@ -118,7 +121,7 @@
 							</div>
 							<div class="col-md-10 heading-section text-left ftco-animate">
 								<p>
-								Our research has shown that the Kohn-Sham potential becomes non-analytic when a charge transfer excitation occurs (<a href="publications.html#Kraisler2021">see publication</a>). We have demonstrated that, in principle, the exact charge-transfer energy can be obtained from the Kohn-Sham system through this discontinuous behavior. Therefore, by using a sufficiently advanced approximation that is able to capture non-analytic behavior (<a href="publications.html#Callow2020">see publication</a>), it is possible to accurately calculate the charge-transfer energy. To learn more about obtaining excitation energies from the Kohn-Sham system, please watch the video below.
+								Our research has shown that the Kohn-Sham potential becomes non-analytic when a charge transfer excitation occurs (<a href="publications.html#Kraisler2021">see publication</a>). We have demonstrated that, in principle, the exact charge-transfer energy can be obtained from the Kohn-Sham system through this discontinuous behavior. Therefore, by using a sufficiently advanced approximation that is able to capture non-analytic behavior (<a href="publications.html#Callow2020">see publication</a>), it is possible to accurately calculate the charge-transfer energy. To learn more about obtaining excitation energies from the Kohn-Sham system see the video below.
 								</p>
 							</div>
 							<div class="col-md-10 heading-section text-left ftco-animate">
